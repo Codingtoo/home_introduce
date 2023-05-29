@@ -17,47 +17,28 @@
     
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
     <script>
-        window.onload=function(){
-            //메뉴클릭시 나타난다.
-            document.addEventListener('DOMContentLoaded', function() {
-            const menuIcon = document.querySelector('.menu-icon');
-            const menuList = document.querySelector('.menu-list');
 
-            menuIcon.addEventListener('click', function() {
-            menuList.style.display = menuList.style.display === 'block' ? 'none' : 'block';
-                });
-            });
 
-        }
 
-var menu=document.querySelector ('.menu-icon');
-    var item=document.
-    window.onload(function(){
-        menu.addEventListener("click", function() {
-      // display 속성을 변경합니다.
-      if (item.style.display === "none") {
-        item.style.display = "block";
-      } 
-      else {
-        item.style.display = "none";
-      }
-    })
-})
-
-        $(document).ready(function() {
-            $('.menu-icon').on('click',function() {
-            $('menu-list').toggle();
-        });
-        $('menu-list').hide();
-        });
+        
         $(window).on('resize', function() {
-  if ($(window).width() < 494) { // 변경하고자 하는 화면 너비를 지정합니다
-      $('.menu-list').hide(); // 숨기고자 하는 목록의 선택자를 지정합니다
-  } else {
+            if ($(window).width() < 494) { // 변경하고자 하는 화면 너비를 지정합니다
+                    $('.menu-list').hide(); // 숨기고자 하는 목록의 선택자를 지정합니다
+  }         else {
       // 보이게 하고자 하는 목록의 선택자를 지정합니다
-    $('.menu-list').hide();
+                $('.menu-list').hide();
 }
 });
+
+        $(document).ready(function() {
+                $('.menu-icon').on('click',function() {
+                $('.menu-list').toggle();
+        });
+            $('menu-list').hide();
+            
+        });
+
+
     window.onload=function(){
         var lists=document.querySelectorAll('li')
         lists[0].onclick=function(){
